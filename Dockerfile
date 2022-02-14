@@ -46,7 +46,8 @@ RUN if (apt-get install -y mongodb-org-shell mongodb-org-tools) \
 
     git clone --depth 1 --branch r4.2.18 https://github.com/mongodb/mongo-tools /src/github.com/mongodb/mongo-tools && \
     cd /src/github.com/mongodb/mongo-tools && \
-    ./build.sh ssl sasl && \
+    apt-get install -y pkg-config && \
+    env CC=$(which gcc) CXX=$(which g++) ./build.sh ssl sasl && \
     strip bin/* && \
     mv bin/* /finalBins/ \
   ; fi
