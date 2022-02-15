@@ -15,4 +15,4 @@ Several ways:
 
 ## Do I need anything to run these binaries?
 Yes as they are not statically-compiled!
-Please install `libcurl4-openssl-dev` before using them.
+Please install the `libcurl4-openssl-dev` and `libpcap-dev` packages before using the binaries.
